@@ -89,27 +89,83 @@ h2 {
 }
 
 /* PROJECTS */
+.project-category {
+  margin-bottom: 50px;
+}
+.project-category h3 {
+  font-size: 1.8em;
+  color: #4fc3f7;
+  margin-bottom: 25px;
+  border-bottom: 2px solid rgba(79, 195, 247, 0.3);
+  padding-bottom: 10px;
+}
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
   gap: 25px;
 }
 .project {
-  padding: 20px;
+  padding: 25px;
   border-radius: 15px;
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
-  transform-style: preserve-3d;
-  transition: transform 0.4s;
+  border: 1px solid rgba(79, 195, 247, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.project::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #4fc3f7, #00bcd4);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+.project:hover::before {
+  transform: scaleX(1);
 }
 .project:hover {
-  transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(79, 195, 247, 0.3);
+  border-color: #4fc3f7;
+}
+.project h4 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.project .tech-stack {
+  font-size: 0.85em;
+  color: #4fc3f7;
+  margin: 10px 0;
+  font-weight: 600;
+}
+.project p {
+  font-size: 0.95em;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 12px 0;
 }
 .project a {
   color: #4fc3f7;
   text-decoration: none;
   display: inline-block;
   margin-top: 10px;
+  margin-right: 15px;
+  padding: 8px 15px;
+  border: 1px solid #4fc3f7;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transition: all 0.3s;
+}
+.project a:hover {
+  background: #4fc3f7;
+  color: #000;
+  transform: translateX(3px);
 }
 
 /* CONTACT */
@@ -176,56 +232,113 @@ footer {
 
 <!-- PROJECTS -->
 <section>
-  <h2>Projects</h2>
-  <div class="project-grid">
-    <!-- Featured Project: Tea Leaf Disease Detection -->
-    <div class="project" style="border: 2px solid #4fc3f7;">
-      <h3>🍃 Tea Leaf Disease Detection</h3>
-      <p>Machine learning model using CNN to detect and classify tea leaf diseases. Built with TensorFlow/Keras, achieving high accuracy in identifying common tea plant diseases from leaf images.</p>
-      <p><strong>Tech Stack:</strong> Python, TensorFlow, Keras, OpenCV, Flask</p>
-      <a href="https://github.com/AbulHasnatHridoy/tea-leaf-disease-detection" target="_blank">GitHub Repo</a>
+  <h2>Featured Projects</h2>
+  
+  <!-- Machine Learning Projects -->
+  <div class="project-category">
+    <h3>🤖 Machine Learning & AI</h3>
+    <div class="project-grid">
+      <div class="project">
+        <h4>🍃 Tea Leaf Disease Detection Model</h4>
+        <p class="tech-stack">Python • TensorFlow • Keras • CNN • OpenCV</p>
+        <p>Advanced deep learning model using Convolutional Neural Networks to detect and classify diseases in tea leaves. Implements image preprocessing and data augmentation for improved accuracy.</p>
+        <a href="https://github.com/AbulHasnatHridoy/FinalTeaLeafDiseasesDetectionModel" target="_blank">📁 GitHub</a>
+      </div>
+      
+      <div class="project">
+        <h4>🍂 Fungal Disease Detection System</h4>
+        <p class="tech-stack">Python • Machine Learning • Computer Vision</p>
+        <p>ML-based system for identifying fungal diseases in tea leaves using image recognition and classification algorithms.</p>
+        <a href="https://github.com/AbulHasnatHridoy/Fungal-Diseases-of-tea-leaves" target="_blank">📁 GitHub</a>
+      </div>
     </div>
-    
-    <!-- GitHub Projects will load below -->
-    <div id="projects" style="display: contents;"></div>
+  </div>
+
+  <!-- Web Development Projects -->
+  <div class="project-category">
+    <h3>🌐 Web Development</h3>
+    <div class="project-grid">
+      <div class="project">
+        <h4>📘 Facebook Clone</h4>
+        <p class="tech-stack">HTML • CSS • JavaScript • Responsive Design</p>
+        <p>Full-featured social media interface clone with responsive design, interactive UI elements, and modern web development practices.</p>
+        <a href="https://github.com/AbulHasnatHridoy/Facebook_clone" target="_blank">📁 GitHub</a>
+        <a href="https://facebook-clone-neon-ten.vercel.app" target="_blank">🌐 Live Demo</a>
+      </div>
+      
+      <div class="project">
+        <h4>🚀 PHP Backend Project</h4>
+        <p class="tech-stack">PHP • MySQL • Backend Development</p>
+        <p>Server-side web application demonstrating PHP backend architecture, database integration, and RESTful API design.</p>
+        <a href="https://github.com/AbulHasnatHridoy/renderProject" target="_blank">📁 GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Development Projects -->
+  <div class="project-category">
+    <h3>📱 Mobile Development (Flutter)</h3>
+    <div class="project-grid">
+      <div class="project">
+        <h4>🔐 Firebase Authentication App</h4>
+        <p class="tech-stack">Flutter • Firebase • Dart • Authentication</p>
+        <p>Complete login and signup system with Firebase backend integration, featuring secure authentication, user management, and real-time database.</p>
+        <a href="https://github.com/AbulHasnatHridoy/LoginSignUpwithFirebase" target="_blank">📁 GitHub</a>
+      </div>
+      
+      <div class="project">
+        <h4>📸 XpertCapture</h4>
+        <p class="tech-stack">Flutter • Dart • Mobile App Development</p>
+        <p>Flutter-based mobile application with advanced features and modern UI/UX design patterns.</p>
+        <a href="https://github.com/AbulHasnatHridoy/xpertCapture" target="_blank">📁 GitHub</a>
+      </div>
+      
+      <div class="project">
+        <h4>✅ Login with Validation</h4>
+        <p class="tech-stack">Flutter • Form Validation • State Management</p>
+        <p>Flutter app demonstrating form validation, user input handling, and state management best practices.</p>
+        <a href="https://github.com/AbulHasnatHridoy/LoginWithValidationProject" target="_blank">📁 GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Programming & Problem Solving -->
+  <div class="project-category">
+    <h3>💻 Competitive Programming</h3>
+    <div class="project-grid">
+      <div class="project">
+        <h4>🎯 LeetCode Solutions (Dart)</h4>
+        <p class="tech-stack">Dart • Algorithms • Data Structures</p>
+        <p>Collection of LeetCode problem solutions implemented in Dart, covering various algorithmic concepts and data structure implementations.</p>
+        <a href="https://github.com/AbulHasnatHridoy/DartPractise" target="_blank">📁 GitHub</a>
+      </div>
+      
+      <div class="project">
+        <h4>🐝 Beecrowd Problems</h4>
+        <p class="tech-stack">C++ • Problem Solving • Algorithms</p>
+        <p>Solutions to competitive programming challenges from Beecrowd platform, demonstrating algorithmic thinking and C++ proficiency.</p>
+        <a href="https://github.com/AbulHasnatHridoy/beecrowded-Problems" target="_blank">📁 GitHub</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact">
   <h2>Contact</h2>
-  <p>Email: <strong>your-email@example.com</strong></p>
+  <p>📧 Email: <a href="mailto:abulhasnat.hridoy@example.com"><strong>abulhasnat.hridoy@example.com</strong></a></p>
   <p>
-    GitHub:
+    💻 GitHub:
     <a href="https://github.com/AbulHasnatHridoy" target="_blank">
       github.com/AbulHasnatHridoy
     </a>
   </p>
+  <p>💼 Open to collaboration and new opportunities!</p>
 </section>
 
 <footer>
   © 2026 Abul Hasnat Hridoy — Portfolio
 </footer>
-
-<script>
-const container = document.getElementById("projects");
-fetch("https://api.github.com/users/AbulHasnatHridoy/repos")
-.then(res => res.json())
-.then(data => {
-  data.sort((a,b)=>new Date(b.updated_at)-new Date(a.updated_at));
-  data.forEach(repo=>{
-    const div = document.createElement("div");
-    div.className="project";
-    div.innerHTML = `
-      <h3>${repo.name}</h3>
-      <p>${repo.description || "No description available"}</p>
-      <a href="${repo.html_url}" target="_blank">GitHub Repo</a>
-      ${repo.homepage ? `<br><a href="${repo.homepage}" target="_blank">Live Demo</a>` : ""}
-    `;
-    container.appendChild(div);
-  });
-});
-</script>
 
 </body>
 </html>
