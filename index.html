@@ -160,6 +160,9 @@ footer {
 <section>
   <h2>Skills</h2>
   <div class="skills-grid">
+    <div class="skill">Python</div>
+    <div class="skill">Machine Learning</div>
+    <div class="skill">TensorFlow</div>
     <div class="skill">HTML5</div>
     <div class="skill">CSS3</div>
     <div class="skill">JavaScript</div>
@@ -174,7 +177,18 @@ footer {
 <!-- PROJECTS -->
 <section>
   <h2>Projects</h2>
-  <div id="projects" class="project-grid"></div>
+  <div class="project-grid">
+    <!-- Featured Project: Tea Leaf Disease Detection -->
+    <div class="project" style="border: 2px solid #4fc3f7;">
+      <h3>🍃 Tea Leaf Disease Detection</h3>
+      <p>Machine learning model using CNN to detect and classify tea leaf diseases. Built with TensorFlow/Keras, achieving high accuracy in identifying common tea plant diseases from leaf images.</p>
+      <p><strong>Tech Stack:</strong> Python, TensorFlow, Keras, OpenCV, Flask</p>
+      <a href="https://github.com/AbulHasnatHridoy/tea-leaf-disease-detection" target="_blank">GitHub Repo</a>
+    </div>
+    
+    <!-- GitHub Projects will load below -->
+    <div id="projects" style="display: contents;"></div>
+  </div>
 </section>
 
 <!-- CONTACT -->
