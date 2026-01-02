@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abul Hasnat Hridoy | Developer Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color: #fff;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3.5em;
+  animation: fadeIn 1.5s ease;
+}
+.hero span {
+  color: #4fc3f7;
+}
+.hero p {
+  font-size: 1.3em;
+  opacity: 0.85;
+}
+.hero .btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: #4fc3f7;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+.hero .btn:hover {
+  transform: scale(1.1);
+}
+
+/* SECTION */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+/* ABOUT */
+.about p {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1em;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  gap: 20px;
+}
+.skill {
+  padding: 20px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s;
+}
+.skill:hover {
+  transform: translateY(-10px);
+}
+
+/* PROJECTS */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 25px;
+}
+.project {
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+  transition: transform 0.4s;
+}
+.project:hover {
+  transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+}
+.project a {
+  color: #4fc3f7;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+.contact a {
+  color: #4fc3f7;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #000;
+  font-size: 0.9em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Hi, I'm <span>Abul Hasnat Hridoy</span></h1>
+  <p>CGPA: <strong>3.58</strong> | Web & Software Developer</p>
+  <a class="btn" href="https://github.com/AbulHasnatHridoy" target="_blank">View GitHub</a>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <h2>About Me</h2>
+  <p>
+    I am a Computer Science student and passionate developer with hands-on experience in web development,
+    programming, and real-world project building. I enjoy learning new technologies and building scalable,
+    user-friendly applications.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section>
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill">HTML5</div>
+    <div class="skill">CSS3</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">PHP</div>
+    <div class="skill">Firebase</div>
+    <div class="skill">Flutter</div>
+    <div class="skill">C / C++</div>
+    <div class="skill">Git & GitHub</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+  <h2>Projects</h2>
+  <div id="projects" class="project-grid"></div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <h2>Contact</h2>
+  <p>Email: <strong>your-email@example.com</strong></p>
+  <p>
+    GitHub:
+    <a href="https://github.com/AbulHasnatHridoy" target="_blank">
+      github.com/AbulHasnatHridoy
+    </a>
+  </p>
+</section>
+
+<footer>
+  © 2026 Abul Hasnat Hridoy — Portfolio
+</footer>
+
+<script>
+const container = document.getElementById("projects");
+fetch("https://api.github.com/users/AbulHasnatHridoy/repos")
+.then(res => res.json())
+.then(data => {
+  data.sort((a,b)=>new Date(b.updated_at)-new Date(a.updated_at));
+  data.forEach(repo=>{
+    const div = document.createElement("div");
+    div.className="project";
+    div.innerHTML = `
+      <h3>${repo.name}</h3>
+      <p>${repo.description || "No description available"}</p>
+      <a href="${repo.html_url}" target="_blank">GitHub Repo</a>
+      ${repo.homepage ? `<br><a href="${repo.homepage}" target="_blank">Live Demo</a>` : ""}
+    `;
+    container.appendChild(div);
+  });
+});
+</script>
+
+</body>
+</html>
