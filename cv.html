@@ -241,8 +241,41 @@ body {
     display: none;
   }
   
+  /* Make header print-friendly */
+  .cv-header {
+    background: white !important;
+    color: #1a237e !important;
+    border-bottom: 4px solid #1a237e;
+    padding: 30px 40px;
+  }
+  
+  .cv-header h1 {
+    color: #1a237e !important;
+  }
+  
+  .cv-header .title {
+    color: #0d47a1 !important;
+    opacity: 1 !important;
+  }
+  
+  .cv-header a {
+    color: #1a237e !important;
+  }
+  
+  .contact-info span {
+    color: #333 !important;
+  }
+  
   .project-links a {
     border: 1px solid #0d47a1;
+    color: #0d47a1 !important;
+  }
+  
+  /* Ensure all text is visible */
+  * {
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 }
 
