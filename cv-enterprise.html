@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abul Hasnat Hridoy - CV</title>
+
+<style>
+* { 
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  color: #000;
+  background: #fff;
+  padding: 20px;
+  font-size: 11pt;
+}
+
+.cv-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+}
+
+.cv-header {
+  text-align: center;
+  border-bottom: 2px solid #000;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.cv-header h1 {
+  font-size: 20pt;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cv-header .title {
+  font-size: 12pt;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.contact-info {
+  font-size: 10pt;
+  margin-top: 8px;
+}
+
+.section {
+  margin-bottom: 20px;
+  page-break-inside: avoid;
+}
+
+.section-title {
+  font-size: 12pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+}
+
+.item {
+  margin-bottom: 12px;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.item-title {
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+.item-date {
+  font-size: 10pt;
+  font-style: italic;
+}
+
+.item-description {
+  margin-top: 3px;
+  text-align: justify;
+  font-size: 10.5pt;
+}
+
+ul {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+ul li {
+  margin-bottom: 3px;
+}
+
+.skills-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.skill-category {
+  margin-bottom: 10px;
+}
+
+.skill-category strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+@media print {
+  body { padding: 0; }
+  .print-button { display: none; }
+}
+
+.print-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 10pt;
+}
+</style>
+</head>
+<body>
+
+<button class="print-button" onclick="window.print()">Download PDF</button>
+
+<div class="cv-container">
+  
+  <!-- HEADER -->
+  <div class="cv-header">
+    <h1>Abul Hasnat Hridoy</h1>
+    <div class="title">IT Executive / System Engineer (Entry Level)</div>
+    <div class="contact-info">
+      Email: hasnathridoy009@gmail.com | Phone: +880-XXXXXXXXX | 
+      LinkedIn: linkedin.com/in/hasnat-hridoy-80918334a | 
+      Location: Dhaka, Bangladesh
+    </div>
+  </div>
+
+  <!-- CAREER OBJECTIVE -->
+  <div class="section">
+    <h2 class="section-title">Career Objective</h2>
+    <p class="item-description">
+      To build a professional career in <strong>Enterprise IT and Systems</strong> within regulated industries, 
+      contributing to <strong>ERP support, infrastructure operations, data integrity, and IT compliance</strong>. 
+      Seeking to apply technical knowledge in systems management, database operations, and IT documentation 
+      to support business-critical applications in pharmaceutical, manufacturing, or ERP-driven environments.
+    </p>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <h2 class="section-title">Education</h2>
+    
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Bachelor of Science in Computer Science & Engineering</span>
+        <span class="item-date">2022 - Present</span>
+      </div>
+      <div>Daffodil International University (DIU) | Student ID: 221-15-6034</div>
+      <div><strong>CGPA: 3.59/4.00 (148 Credits Completed)</strong></div>
+      <div class="item-description">
+        <strong>Relevant Coursework:</strong> Database Management Systems, Enterprise Systems, Operating Systems, 
+        Computer Networks, Information Security, Software Engineering, Data Communication, System Analysis & Design
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Higher Secondary Certificate (HSC) - Science</span>
+        <span class="item-date">2020 - 2022</span>
+      </div>
+      <div><strong>GPA: 4.00/5.00</strong></div>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Secondary School Certificate (SSC) - Science</span>
+        <span class="item-date">2018 - 2020</span>
+      </div>
+      <div><strong>GPA: 5.00/5.00 (Golden A+)</strong></div>
+    </div>
+  </div>
+
+  <!-- CORE IT SKILLS -->
+  <div class="section">
+    <h2 class="section-title">Core IT Skills</h2>
+    <div class="skills-section">
+      <div>
+        <div class="skill-category">
+          <strong>Enterprise Systems & ERP:</strong>
+          <ul>
+            <li>ERP fundamentals (SAP overview)</li>
+            <li>Business process understanding</li>
+            <li>User access management</li>
+            <li>System documentation</li>
+          </ul>
+        </div>
+        
+        <div class="skill-category">
+          <strong>Database & Data Management:</strong>
+          <ul>
+            <li>MySQL / SQL basics</li>
+            <li>Data integrity principles</li>
+            <li>Database backup concepts</li>
+            <li>Query writing & reporting</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <strong>IT Operations:</strong>
+          <ul>
+            <li>MS Excel (Advanced - Pivot, VLOOKUP, Data Analysis)</li>
+            <li>MS PowerPoint & Word</li>
+            <li>IT documentation & SOP writing</li>
+            <li>Technical report preparation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="skill-category">
+          <strong>Systems & Infrastructure:</strong>
+          <ul>
+            <li>Linux fundamentals</li>
+            <li>Windows OS & Server basics</li>
+            <li>Hardware troubleshooting</li>
+            <li>System maintenance</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <strong>Networking & Security:</strong>
+          <ul>
+            <li>TCP/IP, DNS, LAN/WAN concepts</li>
+            <li>Network troubleshooting basics</li>
+            <li>Information security awareness</li>
+            <li>Access control principles</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <strong>Programming & Scripting:</strong>
+          <ul>
+            <li>Python (basic scripting)</li>
+            <li>SQL queries</li>
+            <li>Basic automation understanding</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TECHNICAL PROJECTS (REFRAMED FOR SYSTEMS) -->
+  <div class="section">
+    <h2 class="section-title">Technical Projects & Systems Experience</h2>
+    
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Data Management System for Process Monitoring</span>
+        <span class="item-date">2025</span>
+      </div>
+      <div class="item-description">
+        Designed and implemented a <strong>data management system</strong> for handling user records and process data, 
+        focusing on <strong>data integrity, access control, and secure data storage</strong>. Developed database structure, 
+        user authentication mechanisms, and reporting modules. Emphasized system reliability and data validation processes 
+        suitable for regulated environments.
+        <br><strong>Technologies:</strong> Database design, SQL, user management, data validation
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Inventory & Asset Management System</span>
+        <span class="item-date">2024</span>
+      </div>
+      <div class="item-description">
+        Developed an <strong>inventory tracking system</strong> for asset management with barcode integration. 
+        Implemented database schemas for tracking equipment, locations, and maintenance schedules. 
+        Created Excel-based reporting dashboards for management review.
+        <br><strong>Technologies:</strong> Database systems, Excel automation, inventory control
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Web-Based Documentation Portal</span>
+        <span class="item-date">2024</span>
+      </div>
+      <div class="item-description">
+        Created a <strong>centralized documentation system</strong> for SOPs, technical manuals, and training materials. 
+        Implemented version control, search functionality, and user access permissions based on roles.
+        <br><strong>Technologies:</strong> Web systems, database management, access control
+      </div>
+    </div>
+  </div>
+
+  <!-- ENTERPRISE INTEREST & LEARNING -->
+  <div class="section">
+    <h2 class="section-title">Enterprise Interest & Professional Development</h2>
+    <ul>
+      <li>Actively studying <strong>ERP systems (SAP overview, business process mapping)</strong></li>
+      <li>Learning <strong>enterprise IT practices for manufacturing and pharmaceutical environments</strong></li>
+      <li>Understanding <strong>GMP (Good Manufacturing Practice) and IT compliance requirements</strong></li>
+      <li>Interested in <strong>IT infrastructure, systems security, and data governance</strong></li>
+      <li>Studying <strong>ITIL basics and IT service management principles</strong></li>
+    </ul>
+  </div>
+
+  <!-- KEY COMPETENCIES -->
+  <div class="section">
+    <h2 class="section-title">Key Competencies</h2>
+    <ul>
+      <li><strong>System Operations:</strong> Understanding of enterprise IT operations, system monitoring, and user support</li>
+      <li><strong>Data Management:</strong> Database operations, data integrity verification, backup procedures</li>
+      <li><strong>Documentation:</strong> Technical writing, SOP preparation, system documentation</li>
+      <li><strong>Problem Solving:</strong> Systematic troubleshooting approach for IT issues</li>
+      <li><strong>Compliance Awareness:</strong> Understanding of regulatory requirements in IT systems</li>
+      <li><strong>Team Collaboration:</strong> Working with cross-functional teams on system implementations</li>
+    </ul>
+  </div>
+
+  <!-- PERSONAL INFORMATION -->
+  <div class="section">
+    <h2 class="section-title">Personal Information</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+      <div><strong>Father's Name:</strong> [Your Father's Name]</div>
+      <div><strong>Mother's Name:</strong> [Your Mother's Name]</div>
+      <div><strong>Date of Birth:</strong> [Your DOB]</div>
+      <div><strong>Nationality:</strong> Bangladeshi</div>
+      <div><strong>Religion:</strong> Islam</div>
+      <div><strong>Marital Status:</strong> Single</div>
+    </div>
+  </div>
+
+  <!-- DECLARATION -->
+  <div class="section" style="margin-top: 30px;">
+    <p style="text-align: justify;">
+      <strong>Declaration:</strong> I hereby declare that all the information provided above is true and correct to the best of my knowledge.
+    </p>
+    <div style="margin-top: 40px;">
+      <div><strong>Abul Hasnat Hridoy</strong></div>
+      <div style="font-size: 10pt; color: #666;">Date: January 21, 2026</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
